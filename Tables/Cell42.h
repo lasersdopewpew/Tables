@@ -15,6 +15,6 @@
     @property (nonatomic, weak) IBOutlet UILabel *secondLabel;
     @property (nonatomic, weak) IBOutlet UIButton *button42;
     @property (weak, nonatomic) IBOutlet UIStepper *changer;
-   @property (weak, nonatomic) ViewController42* myController;
-
+    @property NSInteger counter;
+    @property (weak, nonatomic) ViewController42* myController;
 @end

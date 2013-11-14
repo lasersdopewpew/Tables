@@ -10,5 +10,5 @@
 #import "Cell42.h"
 
 @interface ViewController42 : UITableViewController
- -(void)changeSmthng: (double)value cell:(Cell42*)cell;
+ -(void)changeSmthng: (NSInteger)value cell:(Cell42*)cell;
 @end

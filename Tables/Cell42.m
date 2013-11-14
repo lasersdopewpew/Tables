@@ -13,6 +13,7 @@
 @synthesize firstLabel, secondLabel;
 
 
+
 - (id)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier
 {
     self = [super initWithStyle:style reuseIdentifier:reuseIdentifier];
@@ -29,9 +30,21 @@
     // Configure the view for the selected state
 }
 
+-(void) updateUI{
+    UIColor* color = [UIColor colorWithRed:self.counter/10.0 green:0 blue:0.5 alpha:1];
+    self.changer.tintColor = color;
+    [self.myController changeSmthng:self.counter cell:self];
+}
+
+- (IBAction)clear:(UIButton *)sender {
+    self.counter = 0;
+    self.changer.value = 0;
+    [self updateUI];
+}
 
 - (IBAction)changed2:(UIStepper *)sender {
-    [self.myController changeSmthng:sender.value cell:self];
+    self.counter = sender.value;
+    [self updateUI];
 }
 
 @end

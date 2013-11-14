@@ -70,9 +70,9 @@
     return cell;
 }
 
--(void)changeSmthng: (double)value cell:(Cell42*)cell{
-    NSLog(@"%f", value);
-    cell.firstLabel.text = @"New Text";
+-(void)changeSmthng: (NSInteger)value cell:(Cell42*)cell{
+    NSLog(@"%d", value);
+    cell.firstLabel.text = [NSString stringWithFormat:@"%d", value];
 }
 
 
