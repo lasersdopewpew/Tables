@@ -70,10 +70,10 @@
     return cell;
 }
 
--(void)changeSmthng: (NSInteger)value cell:(Cell42*)cell{
+/*-(void)changeSmthng: (NSInteger)value cell:(Cell42*)cell{
     NSLog(@"%d", value);
     cell.firstLabel.text = [NSString stringWithFormat:@"%d", value];
-}
+}*/
 
 
 - (void) lalala: (UIStepper *)sender{

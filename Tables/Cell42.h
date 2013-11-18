@@ -17,4 +17,5 @@
     @property (weak, nonatomic) IBOutlet UIStepper *changer;
     @property NSInteger counter;
     @property (weak, nonatomic) ViewController42* myController;
+    @property (nonatomic) double count;
 @end

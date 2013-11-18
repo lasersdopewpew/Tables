@@ -10,8 +10,7 @@
 #import "ViewController42.h"
 
 @implementation Cell42
-@synthesize firstLabel, secondLabel;
-
+//@synthesize firstLabel, secondLabel;
 
 
 - (id)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier
@@ -23,6 +22,12 @@
     return self;
 }
 
+- (void) setCount:(double)count
+{
+    self.firstLabel.text = [NSString stringWithFormat:@"%.0f", count];
+    _count = count;
+}
+
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated
 {
     [super setSelected:selected animated:animated];
@@ -31,9 +36,10 @@
 }
 
 -(void) updateUI{
-    UIColor* color = [UIColor colorWithRed:self.counter/10.0 green:0 blue:0.5 alpha:1];
+    float x = exp(self.counter/10.0*2)/6;
+    UIColor* color = [UIColor colorWithRed:x green:0 blue:0.5 alpha:1];
     self.changer.tintColor = color;
-    [self.myController changeSmthng:self.counter cell:self];
+    //[self.myController changeSmthng:self.counter cell:self];
 }
 
 - (IBAction)clear:(UIButton *)sender {
@@ -44,6 +50,7 @@
 
 - (IBAction)changed2:(UIStepper *)sender {
     self.counter = sender.value;
+    self.count = sender.value;
     [self updateUI];
 }
 
