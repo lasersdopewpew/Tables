@@ -43,7 +43,7 @@
 }
 
 - (IBAction)clear:(UIButton *)sender {
-    self.counter = 0;
+    self.count = 0;
     self.changer.value = 0;
     [self updateUI];
 }

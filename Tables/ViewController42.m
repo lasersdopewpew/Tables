@@ -41,6 +41,10 @@
     // Dispose of any resources that can be recreated.
 }
 
+- (IBAction)pressss:(UILongPressGestureRecognizer *)sender {
+    if (sender.state == UIGestureRecognizerStateRecognized)
+        NSLog(@"PRESSSS");
+}
 #pragma mark - Table view data source
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView

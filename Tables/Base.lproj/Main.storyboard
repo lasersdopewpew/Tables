@@ -55,7 +55,11 @@
                                             <nil key="highlightedColor"/>
                                         </label>
                                     </subviews>
+                                    <connections>
+                                        <outletCollection property="gestureRecognizers" destination="Jq3-hI-OdM" appends="YES" id="qsQ-JS-Vl9"/>
+                                    </connections>
                                 </tableViewCellContentView>
+                                <gestureRecognizers/>
                                 <connections>
                                     <outlet property="button42" destination="CB3-Wq-KVT" id="4zS-Iy-MvE"/>
                                     <outlet property="changer" destination="Xa6-TG-8Z0" id="eze-K0-IbT"/>
@@ -71,6 +75,11 @@
                     </tableView>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="m7k-KA-7m5" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <pongPressGestureRecognizer allowableMovement="10" minimumPressDuration="0.5" id="Jq3-hI-OdM">
+                    <connections>
+                        <action selector="pressss:" destination="gnj-ma-gYH" id="HfA-kj-naH"/>
+                    </connections>
+                </pongPressGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="215" y="116"/>
         </scene>
